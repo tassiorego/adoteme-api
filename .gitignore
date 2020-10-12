@@ -1,0 +1,9 @@
+node_modules
+*.lock
+dist
+tmp/*
+!tmp/.gitkeep
+*.log
+coverage
+.env
+ormconfig.json
