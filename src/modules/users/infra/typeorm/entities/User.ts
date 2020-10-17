@@ -27,6 +27,9 @@ class User {
   @Column('varchar')
   avatar: string;
 
+  @Column('varchar')
+  phone: string;
+
   @CreateDateColumn()
   created_at: Date;
 
