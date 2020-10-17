@@ -22,6 +22,7 @@ describe('CreatePet', () => {
       sex: 'M',
       age: 0.3,
       type: 'dog',
+      user_id: '3445',
     });
 
     expect(pet).toHaveProperty('id');

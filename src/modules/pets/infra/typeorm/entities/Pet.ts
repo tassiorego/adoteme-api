@@ -29,6 +29,9 @@ class Pet {
   @Column()
   sex: string;
 
+  @Column()
+  user_id: string;
+
   @CreateDateColumn()
   created_at: Date;
 

@@ -20,6 +20,7 @@ class CreatePetService {
     type,
     sex,
     size,
+    user_id,
   }: ICreatePetDTO): Promise<Pet> {
     const pet = await this.petsRepository.create({
       name,
@@ -28,6 +29,7 @@ class CreatePetService {
       sex,
       size,
       type,
+      user_id,
     });
 
     await this.cacheProvider.invalidatePrefix('pets-list');

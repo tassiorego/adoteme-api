@@ -5,4 +5,5 @@ export default interface ICreatePetDTO {
   type: string;
   size: string;
   sex: string;
+  user_id: string;
 }

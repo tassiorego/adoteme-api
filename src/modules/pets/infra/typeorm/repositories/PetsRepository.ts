@@ -17,6 +17,7 @@ class PetsRepository implements IPetsRepository {
     type,
     sex,
     age,
+    user_id,
   }: ICreatePetDTO): Promise<Pet> {
     const pet = this.ormRepository.create({
       name,
@@ -25,6 +26,7 @@ class PetsRepository implements IPetsRepository {
       type,
       sex,
       age,
+      user_id,
     });
 
     await this.ormRepository.save(pet);
