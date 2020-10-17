@@ -21,6 +21,7 @@ class CreateUserService {
     name,
     email,
     password,
+    phone,
   }: ICreateUserDTO): Promise<User> {
     const checkUserExists = await this.usersRepository.findByEmail(email);
 
@@ -34,6 +35,7 @@ class CreateUserService {
       name,
       email,
       password: hashedPassword,
+      phone,
     });
 
     await this.cacheProvider.invalidatePrefix('providers-list');
