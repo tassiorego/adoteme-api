@@ -7,7 +7,7 @@ import IPetsRepository from '../repositories/IPetsRepository';
 @injectable()
 class CreatePetService {
   constructor(
-    @inject('UsersRepository')
+    @inject('PetsRepository')
     private petsRepository: IPetsRepository,
     @inject('CacheProvider')
     private cacheProvider: ICacheProvider,
